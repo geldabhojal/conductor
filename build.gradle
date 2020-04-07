@@ -120,7 +120,7 @@ task codeCoverageReport(type: JacocoReport, group: "Coverage reports") {
     }
 }
 
-/*coveralls {
+coveralls {
     sourceDirs = subprojects.sourceSets.main.allSource.srcDirs.flatten()
     jacocoReportPath = "${project.buildDir}/reports/jacoco/report.xml"
 }
@@ -129,5 +129,5 @@ tasks.coveralls {
     group = "Coverage reports"
     description = "Uploads the aggregated coverage report to Coveralls"
     dependsOn codeCoverageReport
-}*/
+}
 

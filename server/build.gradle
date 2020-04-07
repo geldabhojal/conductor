@@ -58,13 +58,13 @@ shadowJar {
         attributes 'Main-Class': 'com.netflix.conductor.bootstrap.Main'
     }
 }
-publishing {
+/*publishing {
     publications {
         nebula(MavenPublication) {
             artifact shadowJar
         }
     }
-}
+}*/
 
 gretty {
     contextPath = '/'
