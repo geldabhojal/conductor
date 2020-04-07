@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
-- docker build -t conductor/server .
-- docker run -d -p 127.0.0.1:5000:8000 conductor-server-ui /bin/sh -c "pwd"
+- docker build -t conductor .
+- docker run -d -p 127.0.0.1:5000:8000 conductor /bin/sh -c "pwd"
 - docker ps -a
-- docker run conductor/server /bin/sh -c "pwd"
+- docker run conductor /bin/sh -c "pwd"
 
 script:
-- "curl -s http://conductor/server:5000"
+- "curl -s http://conductor:5000"
